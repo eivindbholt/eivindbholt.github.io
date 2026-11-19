@@ -1,0 +1,43 @@
+{{- /*
+  Callout boxes using GitHub/Obsidian syntax:
+
+    > [!TIP]
+    > Text
+
+    > [!WARNING] Custom title
+    > Text
+
+    > [!NOTE]- Click to expand      (collapsed; use + for open by default)
+    > Text
+
+  Types: note, info, tip, important, warning, caution, danger
+*/ -}}
+{{- $icons := dict
+  "note"      "ℹ️"
+  "info"      "ℹ️"
+  "tip"       "💡"
+  "important" "📌"
+  "warning"   "⚠️"
+  "caution"   "🛑"
+  "danger"    "🛑"
+-}}
+{{- if eq .Type "alert" -}}
+  {{- $type := lower .AlertType -}}
+  {{- $icon := index $icons $type | default "ℹ️" -}}
+  {{- $title := .AlertTitle | default (title $type) -}}
+  {{- if .AlertSign -}}
+<details class="callout callout-{{ $type }}"{{ if eq .AlertSign "+" }} open{{ end }}>
+  <summary class="callout-title"><span class="callout-icon">{{ $icon }}</span>{{ $title }}</summary>
+  <div class="callout-body">{{ .Text }}</div>
+</details>
+  {{- else -}}
+<div class="callout callout-{{ $type }}">
+  <p class="callout-title"><span class="callout-icon">{{ $icon }}</span>{{ $title }}</p>
+  <div class="callout-body">{{ .Text }}</div>
+</div>
+  {{- end -}}
+{{- else -}}
+<blockquote>
+  {{ .Text }}
+</blockquote>
+{{- end -}}

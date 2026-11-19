@@ -1,0 +1,43 @@
+/* Callout boxes: see layouts/_markup/render-blockquote.html */
+
+.post-content .callout {
+  --callout: #4493f8;
+  margin: 1.5rem 0;
+  padding: 0.75rem 1rem;
+  border-left: 4px solid var(--callout);
+  border-radius: var(--radius, 8px);
+  background: color-mix(in srgb, var(--callout) 10%, transparent);
+}
+
+.post-content .callout-title {
+  margin: 0;
+  font-weight: 600;
+  color: var(--callout);
+}
+
+.post-content .callout-icon {
+  margin-inline-end: 0.5rem;
+}
+
+.post-content .callout-body {
+  margin-top: 0.4rem;
+}
+
+.post-content .callout-body > :first-child { margin-top: 0; }
+.post-content .callout-body > :last-child  { margin-bottom: 0; }
+
+/* Collapsible variant */
+.post-content details.callout > summary {
+  cursor: pointer;
+  list-style-position: inside;
+}
+.post-content details.callout:not([open]) .callout-body { display: none; }
+
+/* Colours */
+.post-content .callout-note,
+.post-content .callout-info      { --callout: #4493f8; }
+.post-content .callout-tip       { --callout: #3fb950; }
+.post-content .callout-important { --callout: #ab7df8; }
+.post-content .callout-warning   { --callout: #d29922; }
+.post-content .callout-caution,
+.post-content .callout-danger    { --callout: #f85149; }
