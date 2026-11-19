@@ -13,6 +13,6 @@ I'm Eivind, a master's student in cybersecurity at Høyskolen Kristiania in Oslo
 
 ## Contact
 
-- GitHub: [eivindbholt](https://github.com/eivindbholt)
-- LinkedIn: [eivindbholt](https://www.linkedin.com/in/eivind-borg-holt-562698264/)
-- Email: [eivindbholt](mailto:eivind.holt@proton.me)
+- [GitHub](https://github.com/eivindbholt)
+- [LinkedIn](https://www.linkedin.com/in/eivind-borg-holt-562698264/)
+- [Email](mailto:eivind.holt@proton.me)
