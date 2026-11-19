@@ -1,0 +1,112 @@
+baseURL = "https://eivindbholt.github.io/"
+locale = "en"
+title = "Eivind Borg Holt"
+theme = "PaperMod"
+
+enableRobotsTXT = true
+buildDrafts = false
+buildFuture = false
+buildExpired = false
+
+[pagination]
+  pagerSize = 10
+
+[minify]
+  disableXML = true
+  minifyOutput = true
+
+# Needed for the search page (PaperMod uses Fuse.js on index.json)
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
+[taxonomies]
+  tag = "tags"
+  category = "categories"
+
+[params]
+  env = "production"
+  title = "Eivind Borg Holt"
+  description = "Security write-ups, CTFs and projects."
+  author = "Eivind Borg Holt"
+  defaultTheme = "auto"          # follows the visitor's light/dark setting
+  disableThemeToggle = false
+  mainSections = ["writeups", "projects"]
+
+  ShowReadingTime = true
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = true
+  ShowToc = true
+  TocOpen = false
+  ShowShareButtons = false
+  ShowRssButtonInSectionTermList = true
+  ShowWordCount = false
+  ShowFullTextinRSS = true
+  hideAuthor = false
+
+  [params.homeInfoParams]
+    Title = "Hi, I'm Eivind 👋"
+    Content = """
+Master's student in cybersecurity at Høyskolen Kristiania, Oslo.
+Here I publish CTF write-ups, malware analysis and security projects.
+"""
+
+  [[params.socialIcons]]
+    name = "github"
+    url = "https://github.com/eivindbholt"
+  # Uncomment and fill in:
+  # [[params.socialIcons]]
+  #   name = "linkedin"
+  #   url = "https://www.linkedin.com/in/YOUR-HANDLE/"
+  [[params.socialIcons]]
+    name = "rss"
+    url = "index.xml"
+
+  [params.fuseOpts]
+    isCaseSensitive = false
+    shouldSort = true
+    location = 0
+    distance = 1000
+    threshold = 0.4
+    minMatchCharLength = 2
+    keys = ["title", "permalink", "summary", "content"]
+
+[menu]
+  [[menu.main]]
+    identifier = "writeups"
+    name = "Write-ups"
+    url = "/writeups/"
+    weight = 10
+  [[menu.main]]
+    identifier = "projects"
+    name = "Projects"
+    url = "/projects/"
+    weight = 20
+  [[menu.main]]
+    identifier = "tags"
+    name = "Tags"
+    url = "/tags/"
+    weight = 30
+  [[menu.main]]
+    identifier = "search"
+    name = "Search"
+    url = "/search/"
+    weight = 40
+  [[menu.main]]
+    identifier = "about"
+    name = "About"
+    url = "/about/"
+    weight = 50
+
+[markup]
+  [markup.goldmark.renderer]
+    unsafe = false               # no raw HTML in Markdown
+  [markup.highlight]
+    noClasses = false
+    codeFences = true
+    guessSyntax = true
+    lineNos = false
+    style = "monokai"
+  [markup.tableOfContents]
+    startLevel = 2
+    endLevel = 3
