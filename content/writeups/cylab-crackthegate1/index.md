@@ -4,8 +4,8 @@ date: 2026-11-20T14:10:06+01:00
 draft: false
 # Platform / event, e.g. HackTheBox, TryHackMe, picoCTF
 categories: ["CyLab Security Academy"]
-# Techniques and tools, e.g. web, sqli, privesc, reversing, ghidra
-tags: ["Information Disclosure", "BurpSuite", "CyLab"]
+summary: "We’re in the middle of an investigation. One of our persons of interest, ctf player, is believed to be hiding sensitive data inside a restricted web portal. We’ve uncovered the email address he uses to log in: ctf-player@cylabacademy.org. Unfortunately, we don’t know the password, and the usual guessing techniques haven’t worked. But something feels off... it’s almost like the developer left a secret way in. Can you figure it out? The website is running here. Can you try to log in?"
+tags: ["Information Disclosure", "BurpSuite", "CyLab", "Easy"]
 ---
 
 ## Overview

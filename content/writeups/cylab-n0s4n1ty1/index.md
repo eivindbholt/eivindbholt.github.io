@@ -4,7 +4,7 @@ date: 2026-11-20T14:10:06+01:00
 draft: false
 # Platform / event, e.g. HackTheBox, TryHackMe, picoCTF
 categories: ["CyLab Security Academy"]
-# Techniques and tools, e.g. web, sqli, privesc, reversing, ghidra
+summary: "A developer has added profile picture upload functionality to a website. However, the implementation is flawed, and it presents an opportunity for you. Your mission, should you choose to accept it, is to navigate to the provided web page and locate the file upload area. Your ultimate goal is to find the hidden flag located in the /root directory. You can access the web application here!"
 tags: ["File Upload", "CyLab", "Web Shell", "Remote Code Execution", "Privilege Escalation"]
 ---
 

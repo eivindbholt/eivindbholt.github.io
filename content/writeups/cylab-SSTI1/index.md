@@ -4,7 +4,7 @@ date: 2026-11-20T14:10:06+01:00
 draft: false
 # Platform / event, e.g. HackTheBox, TryHackMe, picoCTF
 categories: ["CyLab Security Academy"]
-# Techniques and tools, e.g. web, sqli, privesc, reversing, ghidra
+summary: "I made a cool website where you can announce whatever you want! Try it out! I heard templating is a cool and modular way to build web apps! Check out my website here!"
 tags: ["Server-Side Template Injection", "CyLab"]
 ---
 
