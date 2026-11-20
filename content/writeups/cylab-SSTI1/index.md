@@ -1,7 +1,7 @@
 ---
 title: "CyLab: SSTI 1"
 date: 2026-11-20T14:10:06+01:00
-draft: true
+draft: false
 # Platform / event, e.g. HackTheBox, TryHackMe, picoCTF
 categories: ["CyLab Security Academy"]
 # Techniques and tools, e.g. web, sqli, privesc, reversing, ghidra
